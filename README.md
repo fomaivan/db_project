@@ -14,4 +14,7 @@
  Концептуальная модель:
  ![Image alt](https://github.com/fomaivan/db_project/blob/master/docs/conceptual-model.png)
  
- Физическая модель лежит в этом репозитории по ссылке: https://github.com/fomaivan/db_project/blob/master/docs/physical-model.md
+  Логическая модель после нормализации:
+https://github.com/fomaivan/db_project/blob/master/docs/logical-model.png 
+
+ Физическая модель:       https://github.com/fomaivan/db_project/blob/master/docs/physical-model.md
