@@ -3,8 +3,8 @@ CREATE SCHEMA mt;
 CREATE TABLE mt.employer(
     user_id INTEGER NOT NULL,
     name VARCHAR(255) NOT NULL,
-    phone VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
     address VARCHAR(255) NOT NULL,
     card VARCHAR(255) NOT NULL,
     join_date DATE NOT NULL,
