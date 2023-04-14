@@ -31,7 +31,9 @@ variables:
 #  путей к файлам и директориям
 #  у вас будет ${PROJECT_DIR} тождественно равен ${CI_PROJECT_DIR}
   PROJECT_DIR: ${CI_PROJECT_DIR}
-  SCRIPTS_DIR: ${CI_PROJECT_DIR}/scripts
+  SCRIPTS_DIR: ${PROJECT_DIR}/scripts
+  UTILS_DIR: ${PROJECT_DIR}/utils
+  PYPSQL: ${UTILS_DIR}/pypsql.py
 
 #  переменные для цвета в консоли (можете
 #  использовать какие-то другие свои)
