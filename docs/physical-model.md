@@ -4,14 +4,14 @@
 
 Таблица `ticket`:
 
-| Название        | Описание           | Тип данных     | Ограничение   |
-|-----------------|--------------------|----------------|---------------|
-| `ticket_id`     | Идентификатор      | `INTEGER`      | `PRIMARY KEY` |
-| `usere_id`      | id клиента         | `INTEGER`      | `FOREIGN KEY` |
-| `sessions_id`   | id сессии          | `INTEGER`      | `FOREIGN KEY` |
-| `seat_num`      | место в зале       | `INTEGER`      | `NOT NULL`    |
+| Название      | Описание           | Тип данных     | Ограничение   |
+|---------------|--------------------|----------------|---------------|
+| `ticket_id`   | Идентификатор      | `INTEGER`      | `PRIMARY KEY` |
+| `user_id`     | id клиента         | `INTEGER`      | `FOREIGN KEY` |
+| `purchase_id` | id сессии          | `INTEGER`      | `FOREIGN KEY` |
+| `seat_num`    | место в зале       | `INTEGER`      | `NOT NULL`    |
 
-Таблица `employer`:
+Таблица `user`:
 
 | Название             | Описание                   | Тип данных     | Ограничение   |
 |----------------------|----------------------------|----------------|---------------|
@@ -86,14 +86,14 @@
 CREATE TABLE cb.ticket(
     ticket_id INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
-    session_id INTEGER NOT NULL,
+    purchase_id INTEGER NOT NULL,
     seat_num INTEGER NOT NULL,
 
     CONSTRAINT ticket_pk PRIMARY KEY (ticket_id)
 );
 ```
 
-Таблица `employer`:
+Таблица `user`:
 ```postgresql
 CREATE TABLE cb.employer(
     user_id INTEGER NOT NULL,
