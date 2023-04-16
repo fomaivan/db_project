@@ -97,6 +97,3 @@ ALTER TABLE mt.screening
     ADD CONSTRAINT session_cinema_id_foreign FOREIGN KEY(cinema_id) REFERENCES mt.cinema(cinema_id);
 ALTER TABLE mt.ticket
     ADD CONSTRAINT ticket_user_id_foreign FOREIGN KEY(user_id) REFERENCES mt.user(user_id);
-ALTER TABLE mt.ticket
-    ADD CONSTRAINT ticket_session_id_foreign FOREIGN KEY(purchase_id) REFERENCES mt.purchase(purchase_id);
-

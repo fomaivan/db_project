@@ -3,7 +3,7 @@ SELECT c.cinema_name, count(session_id) AS count_of_visitors
 FROM mt.screening s
 LEFT JOIN mt.cinema c ON s.cinema_id = c.cinema_id
 GROUP BY c.cinema_name
-HAVING count(session_id) > 5
+HAVING count(session_id) > 100
 ORDER BY count_of_visitors DESC;
 
 -- Суммарное количество показов во всех кинотеатрах
@@ -46,9 +46,9 @@ WHERE dense_rank_ = 1;
 
 
 -- Список 10 пользователей, которые купили максимальное число билетов
-SELECT employer.user_id, employer.name, count(ticket_id) AS number_of_visits
-FROM mt.employer
-RIGHT JOIN mt.ticket t on employer.user_id = t.user_id
-GROUP BY employer.user_id, employer.name
+SELECT u.user_id, u.name, count(ticket_id) AS number_of_visits
+FROM mt.user u
+RIGHT JOIN mt.ticket t on u.user_id = t.user_id
+GROUP BY u.user_id, u.name
 ORDER BY number_of_visits DESC
 LIMIT 10;

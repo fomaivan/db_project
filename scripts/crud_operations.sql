@@ -3,7 +3,7 @@ SELECT *
 FROM mt.movie;
 
 SELECT user_id, name, join_date
-FROM mt.employer;
+FROM mt.user;
 
 SELECT s.session_id, m.title
 FROM mt.screening s
@@ -14,21 +14,14 @@ INSERT INTO mt.movie VALUES (3, 'Криминальное чтиво', 'Крим
 INSERT INTO mt.movie VALUES (4, 'Джанго освобожденный', 'Боевик, Драма, Комедия', 'Квентин Тарантино', 'Джейми Фокс, Кристоф Вальц, Леонардо ДиКаприо', 'Шульц — эксцентричный охотник за головами, который выслеживает и отстреливает самых опасных преступников. Он освобождает раба по имени Джанго...', '165');
 
 --
-UPDATE mt.employer
+UPDATE mt.user
 SET name = 'Dima555'
 WHERE user_id = 23;
 
-UPDATE mt.employer
+UPDATE mt.user
 SET name = 'Sofa Vorobeva'
 WHERE user_id = 3;
 
 UPDATE mt.hall
 SET hall_size = 15
 WHERE hall_id = 3;
-
---
-DELETE FROM mt.cinema WHERE cinema_id = 1;
-
-DELETE FROM mt.screening WHERE session_id = 1;
-
-DELETE FROM mt.movie WHERE movie_id = 1;
