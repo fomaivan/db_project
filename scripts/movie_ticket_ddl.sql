@@ -1,6 +1,6 @@
 CREATE SCHEMA mt;
 
-CREATE TABLE mt.employer(
+CREATE TABLE mt.user(
     user_id INTEGER NOT NULL,
     name VARCHAR(255) NOT NULL,
     phone VARCHAR(255) NOT NULL UNIQUE,
@@ -34,7 +34,7 @@ CREATE TABLE mt.screening(
 CREATE TABLE mt.ticket(
     ticket_id INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
-    session_id INTEGER NOT NULL,
+    purchase_id INTEGER NOT NULL,
     seat_num INTEGER NOT NULL,
 
     CONSTRAINT ticket_pk PRIMARY KEY (ticket_id)
@@ -96,7 +96,7 @@ ALTER TABLE mt.screening
 ALTER TABLE mt.screening
     ADD CONSTRAINT session_cinema_id_foreign FOREIGN KEY(cinema_id) REFERENCES mt.cinema(cinema_id);
 ALTER TABLE mt.ticket
-    ADD CONSTRAINT ticket_user_id_foreign FOREIGN KEY(user_id) REFERENCES mt.employer(user_id);
+    ADD CONSTRAINT ticket_user_id_foreign FOREIGN KEY(user_id) REFERENCES mt.user(user_id);
 ALTER TABLE mt.ticket
-    ADD CONSTRAINT ticket_session_id_foreign FOREIGN KEY(session_id) REFERENCES mt.screening(session_id);
+    ADD CONSTRAINT ticket_session_id_foreign FOREIGN KEY(purchase_id) REFERENCES mt.purchase(purchase_id);
 

@@ -83,7 +83,7 @@
 ---
 Таблица `ticket`:
 ```postgresql
-CREATE TABLE cb.ticket(
+CREATE TABLE mt.ticket(
     ticket_id INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
     purchase_id INTEGER NOT NULL,
@@ -95,7 +95,7 @@ CREATE TABLE cb.ticket(
 
 Таблица `user`:
 ```postgresql
-CREATE TABLE cb.employer(
+CREATE TABLE mt.employer(
     user_id INTEGER NOT NULL,
     name VARCHAR(255) NOT NULL,
     phone VARCHAR(255) NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE cb.employer(
 
 Таблица `purchase`:
 ```postgresql
-CREATE TABLE cb.purchase(
+CREATE TABLE mt.purchase(
     purchase_id INTEGER NOT NULL,
     ticket_id INTEGER NOT NULL,
     session_id INTEGER NOT NULL,
@@ -122,7 +122,7 @@ CREATE TABLE cb.purchase(
 
 Таблица `movie`:
 ```postgresql
-CREATE TABLE cb.movie(
+CREATE TABLE mt.movie(
     movie_id INTEGER NOT NULL,
     title VARCHAR(255) NOT NULL,
     genre VARCHAR(255) NOT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE cb.movie(
 
 Таблица `hall`:
 ```postgresql
-CREATE TABLE cb.hall(
+CREATE TABLE mt.hall(
     hall_id INTEGER NOT NULL,
     cinema_id INTEGER NOT NULL,
     hall_size INTEGER NOT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE cb.hall(
 
 Таблица `screening`:
 ```postgresql
-CREATE TABLE cb.screening(
+CREATE TABLE mt.screening(
     session_id INTEGER NOT NULL,
     cinema_id INTEGER NOT NULL,
     hall_id INTEGER NOT NULL,
@@ -161,7 +161,7 @@ CREATE TABLE cb.screening(
 
 Таблица `cinema`:
 ```postgresql
-CREATE TABLE cb.cinema(
+CREATE TABLE mt.cinema(
     cinema_id INTEGER NOT NULL,
     cinema_name VARCHAR(255) NOT NULL,
     lon DOUBLE PRECISION NOT NULL,
@@ -173,7 +173,7 @@ CREATE TABLE cb.cinema(
 
 Таблица `session_cinema`:
 ```postgresql
-CREATE TABLE cb.session_cinema(
+CREATE TABLE mt.session_cinema(
     sessions_cinema_id INTEGER NOT NULL,
     session_id INTEGER NOT NULL,
     cinema_id INTEGER NOT NULL,
