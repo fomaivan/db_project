@@ -121,4 +121,3 @@ if __name__ == "__main__":
 
     if args.sql:
         exec_sql(args.sql, args.verbose)
-

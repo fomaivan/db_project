@@ -1,9 +1,9 @@
--- Выберем только кинотеатры, где количество посетителей за все время больше 100
+-- Выберем только кинотеатры, где количество посетителей за все время больше 3
 SELECT c.cinema_name, count(session_id) AS count_of_visitors
 FROM mt.screening s
 LEFT JOIN mt.cinema c ON s.cinema_id = c.cinema_id
 GROUP BY c.cinema_name
-HAVING count(session_id) > 100
+HAVING count(session_id) > 3
 ORDER BY count_of_visitors DESC;
 
 -- Суммарное количество показов во всех кинотеатрах
@@ -28,7 +28,7 @@ RIGHT JOIN mt.purchase p on s.session_id = p.session_id
 LEFT JOIN mt.cinema c on c.cinema_id = s.cinema_id
 GROUP BY cinema_name, hall_id;
 
--- Самый популярный фильм в каждом кинотеатре
+-- Самый популярный фильм для каждого кинотеатра за все время
 WITH tmp AS (
     SELECT cinema_id, movie_id,
            count(session_id) OVER (PARTITION BY cinema_id, movie_id) AS num
