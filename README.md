@@ -12,9 +12,9 @@
  Сделаем Базу Данных в 2НФ
  
  Концептуальная модель:
- ![Image alt](https://github.com/fomaivan/db_project/blob/master/docs/conceptual-model.png)
+ ![Image alt](https://gitlab.atp-fivt.org/db2023/fominiv-project/-/blob/dev/docs/conceptual-model.png)
  
   Логическая модель после нормализации:
-https://github.com/fomaivan/db_project/blob/master/docs/logical-model.png 
+https://gitlab.atp-fivt.org/db2023/fominiv-project/-/blob/dev/docs/logical-model.png
 
- Физическая модель:       https://github.com/fomaivan/db_project/blob/master/docs/physical-model.md
+ Физическая модель:       https://gitlab.atp-fivt.org/db2023/fominiv-project/-/blob/dev/docs/physical-model.md
