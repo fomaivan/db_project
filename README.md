@@ -17,5 +17,4 @@
   Логическая модель после нормализации:
   ![Image alt](https://github.com/fomaivan/db_project/blob/master/docs/logical-model.png)
 
- Физическая модель:
- ![Image alt](https://github.com/fomaivan/db_project/blob/master/docs/physical-model.md)
+ Физическая модель: https://github.com/fomaivan/db_project/blob/master/docs/physical-model.md
